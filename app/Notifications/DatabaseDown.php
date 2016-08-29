@@ -113,10 +113,8 @@ class DatabaseDown extends Notification
                     $msg = $err.': '.mysqli_connect_error ();
                     $user->notify(new \App\Notifications\DatabaseDown($msg));
                 } else {
-//                dd($user);
-//                \Illuminate\Support\Facades\Notification::send($user, new \App\Notifications\DatabaseDown());
                     $msg = 'no error occurred';
-                    $user->notify(new \App\Notifications\DatabaseDown($msg));
+//                    $user->notify(new \App\Notifications\DatabaseDown($msg));
                 }
             } catch (\Exception $e){
                 $msg = 'Erro: '.$e->getMessage();
