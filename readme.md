@@ -6,6 +6,8 @@ rsync -rvztPhe ssh .env.production 104.197.251.61:code/db-test/.env
 npm install -g nexmo-cli 
 nexmo setup API_KEY API_SECRET
 
+*  *    * * *   root    php /home/luciano/code/db-test/artisan schedule:run 1>> /dev/null 2>&1
+
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
 [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
 [![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)

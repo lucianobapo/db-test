@@ -115,7 +115,8 @@ class DatabaseDown extends Notification
                 } else {
 //                dd($user);
 //                \Illuminate\Support\Facades\Notification::send($user, new \App\Notifications\DatabaseDown());
-                    echo 'no error occurred';
+                    $msg = 'no error occurred';
+                    $user->notify(new \App\Notifications\DatabaseDown($msg));
                 }
             } catch (\Exception $e){
                 $msg = 'Erro: '.$e->getMessage();
