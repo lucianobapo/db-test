@@ -29,7 +29,8 @@ class Kernel extends ConsoleKernel
         //          ->hourly();
 
         $schedule->call((new \App\Notifications\DatabaseDown)->scheduled())
-            ->everyFiveMinutes()
+//            ->everyFiveMinutes()
+            ->everyThirtyMinutes()
 //            ->weekly()
 //            ->mondays()
 //            ->at('13:00')
